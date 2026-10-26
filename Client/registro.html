@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OficioMar – Crear Cuenta</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--fondo);
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-container">
+    <div class="auth-card" style="max-width: 440px;">
+      
+      <!-- LOGO PEQUEÑO ARRIBA -->
+      <div class="auth-logo-header">
+        <a href="index.php" class="auth-brand">
+          <span class="brand-wave">🌊</span>
+          <span class="brand-title">Oficio<span>Mar</span></span>
+        </a>
+        <p class="auth-tagline">Creá tu cuenta gratis en pocos segundos</p>
+      </div>
+
+      <!-- TÍTULO DEL FORMULARIO -->
+      <div class="auth-header-text">
+        <h2>Crear cuenta</h2>
+        <p>Seleccioná tu tipo de usuario e ingresá tus datos</p>
+      </div>
+
+      <!-- MENSAJE DE ERROR -->
+      <div class="alerta-error" id="alertaError">
+        ⚠️ El correo ingresado ya existe o los datos son incompletos.
+      </div>
+
+      <!-- FORMULARIO DE REGISTRO -->
+      <form action="registro.php" method="POST" class="auth-form" autocomplete="on">
+        
+        <div class="campo">
+          <label for="nombre">Nombre y Apellido *</label>
+          <input 
+            type="text" 
+            id="nombre" 
+            name="nombre" 
+            placeholder="Ej: Martín Rossi" 
+            required 
+            autocomplete="name"
+            autofocus
+          >
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo Electrónico *</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="martin@ejemplo.com" 
+            required 
+            autocomplete="email"
+          >
+        </div>
+
+        <div class="campo">
+          <label for="contrasena">Contraseña *</label>
+          <input 
+            type="password" 
+            id="contrasena" 
+            name="contrasena" 
+            placeholder="Mínimo 6 caracteres" 
+            minlength="6" 
+            required 
+            autocomplete="new-password"
+          >
+          <div class="hint">Al menos 6 caracteres alfanuméricos</div>
+        </div>
+
+        <div class="rol-titulo">¿Cómo vas a usar OficioMar? *</div>
+        <div class="rol-grid">
+          <div>
+            <input class="rol-input" type="radio" name="rol" id="rol-turista" value="turista" checked>
+            <label class="rol-label" for="rol-turista">
+              <span class="icono">🏖️</span>
+              <span class="nombre">Soy Turista</span>
+              <span class="desc">Busco profesionales en Mar del Plata</span>
+            </label>
+          </div>
+          <div>
+            <input class="rol-input" type="radio" name="rol" id="rol-profesional" value="profesional">
+            <label class="rol-label" for="rol-profesional">
+              <span class="icono">🔧</span>
+              <span class="nombre">Soy Profesional</span>
+              <span class="desc">Ofrezco mis oficios y servicios</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-principal auth-btn">
+          Registrarme y comenzar →
+        </button>
+      </form>
+
+      <!-- ENLACE A INICIAR SESIÓN -->
+      <div class="auth-footer">
+        <span>¿Ya tenés una cuenta registrada?</span>
+        <a href="index.php" class="auth-link">Iniciá sesión acá</a>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
