@@ -28,3 +28,5 @@
 
    ## Autor
    Gabriel Emanuel Litwin
+## Estado
+   Proyecto en desarrollo.
